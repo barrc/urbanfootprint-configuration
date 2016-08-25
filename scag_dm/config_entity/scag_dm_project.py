@@ -10,10 +10,10 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General
 # Public License v3 for more details; see <http://www.gnu.org/licenses/>.
 
-from footprint.client.configuration.clients.scag_dm.base.existing_land_use_parcel import ExistingLandUseParcel
-from footprint.client.configuration.clients.scag_dm.base.city_boundary import CityBoundary
+from footprint.client.configuration.scag_dm.base.existing_land_use_parcel import ExistingLandUseParcel
+from footprint.client.configuration.scag_dm.base.city_boundary import CityBoundary
 from footprint.client.configuration.fixture import ProjectFixture
-from footprint.client.configuration.clients.scag_dm.config_entity.scag_dm_config_entities import ScagDmDbEntityKey
+from footprint.client.configuration.scag_dm.config_entity.scag_dm_config_entities import ScagDmDbEntityKey
 from footprint.main.models.geospatial.db_entity import DbEntity
 from footprint.main.models.geospatial.feature_behavior import FeatureBehavior
 from footprint.main.models.category import Category

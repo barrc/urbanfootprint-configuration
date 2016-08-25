@@ -12,7 +12,7 @@
 
 
 from footprint.client.configuration.fixture import ResultConfigurationFixture
-from footprint.client.configuration.clients.scag_dm.config_entity.scag_dm_config_entities import ScagDmDbEntityKey
+from footprint.client.configuration.scag_dm.config_entity.scag_dm_config_entities import ScagDmDbEntityKey
 from footprint.main.publishing.result_initialization import ResultConfiguration, ResultLibraryKey, ResultKey, ResultSort
 from footprint.main.utils.fixture_list import FixtureList
 

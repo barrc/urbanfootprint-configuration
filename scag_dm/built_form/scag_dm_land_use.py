@@ -11,7 +11,7 @@
 # Public License v3 for more details; see <http://www.gnu.org/licenses/>.
 
 from django.db import models
-from footprint.client.configuration.clients.scag_dm.built_form.scag_dm_land_use_definition import ScagDmLandUseDefinition
+from footprint.client.configuration.scag_dm.built_form.scag_dm_land_use_definition import ScagDmLandUseDefinition
 from footprint.main.managers.geo_inheritance_manager import GeoInheritanceManager
 from footprint.main.models.built_form.client_land_use import ClientLandUse
 

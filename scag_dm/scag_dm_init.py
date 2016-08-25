@@ -14,7 +14,7 @@ import os
 from django.core.management import call_command
 from django.conf import settings
 from footprint.client.configuration.fixture import InitFixture
-from footprint.client.configuration.clients.scag_dm.built_form.scag_dm_land_use_definition import ScagDmLandUseDefinition
+from footprint.client.configuration.scag_dm.built_form.scag_dm_land_use_definition import ScagDmLandUseDefinition
 import logging
 logger = logging.getLogger(__name__)
 

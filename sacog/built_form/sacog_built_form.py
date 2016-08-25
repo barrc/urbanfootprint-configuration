@@ -14,8 +14,8 @@ from django.contrib.auth import get_user_model
 from django.template.defaultfilters import slugify
 
 from footprint.client.configuration.fixture import BuiltFormFixture, LandUseSymbologyFixture
-from footprint.client.configuration.clients.sacog.built_form.sacog_land_use_definition import SacogLandUseDefinition
-from footprint.client.configuration.clients.sacog.built_form.sacog_land_use import SacogLandUse
+from footprint.client.configuration.sacog.built_form.sacog_land_use_definition import SacogLandUseDefinition
+from footprint.client.configuration.sacog.built_form.sacog_land_use import SacogLandUse
 from footprint.main.lib.functions import merge
 from footprint.main.models.config.region import Region
 from footprint.main.models.built_form.urban.building_type import BuildingType

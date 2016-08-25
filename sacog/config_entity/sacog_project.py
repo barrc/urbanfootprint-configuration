@@ -10,8 +10,8 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General
 # Public License v3 for more details; see <http://www.gnu.org/licenses/>.
 
-from footprint.client.configuration.clients.sacog.config_entity.sacog_region import SacogDbEntityKey
-from footprint.client.configuration.clients.sacog.base.elk_grove_land_use_parcel import ElkGroveLandUseParcel
+from footprint.client.configuration.sacog.config_entity.sacog_region import SacogDbEntityKey
+from footprint.client.configuration.sacog.base.elk_grove_land_use_parcel import ElkGroveLandUseParcel
 from footprint.main.models import AgricultureFeature
 from footprint.main.models.base.transit_stop_feature import TransitStopFeature
 from footprint.main.models.analysis.vmt_features.vmt_trip_lengths_feature import VmtTripLengthsFeature
@@ -28,7 +28,7 @@ from footprint.main.models.geospatial.feature_behavior import FeatureBehavior
 from footprint.main.models.geospatial.feature_class_configuration import FeatureClassConfiguration
 from footprint.main.models.feature.feature_class_creator import FeatureClassCreator
 from footprint.client.configuration.fixture import ProjectFixture
-from footprint.client.configuration.clients.sacog.base.sacog_existing_land_use_parcel_feature import \
+from footprint.client.configuration.sacog.base.sacog_existing_land_use_parcel_feature import \
     SacogExistingLandUseParcelFeature
 from footprint.main.lib.functions import merge
 from footprint.main.models.geospatial.intersection import Intersection, JoinTypeKey, GeographicIntersection, \
