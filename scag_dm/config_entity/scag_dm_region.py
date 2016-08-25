@@ -10,28 +10,28 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General
 # Public License v3 for more details; see <http://www.gnu.org/licenses/>.
 
-from footprint.client.configuration.scag_dm.base.scenario_planning_zones import ScenarioPlanningZones
-from footprint.client.configuration.scag_dm.base.county_boundary import CountyBoundary
-from footprint.client.configuration.scag_dm.base.cpad_holdings import CpadHoldings
-from footprint.client.configuration.scag_dm.base.endangered_species import EndangeredSpecies
-from footprint.client.configuration.scag_dm.base.existing_land_use_parcel import ExistingLandUseParcel
-from footprint.client.configuration.scag_dm.base.farmland import Farmland
-from footprint.client.configuration.scag_dm.base.flood_zones import FloodZones
-from footprint.client.configuration.scag_dm.base.general_plan_parcels import GeneralPlanParcels
-from footprint.client.configuration.scag_dm.base.entitlement_parcels import EntitlementParcels
-from footprint.client.configuration.scag_dm.base.habitat_conservation_areas import HabitatConservationAreas
-from footprint.client.configuration.scag_dm.base.high_quality_transit_areas import HighQualityTransitAreas
-from footprint.client.configuration.scag_dm.base.high_quality_transit_corridors import HighQualityTransitCorridors
-from footprint.client.configuration.scag_dm.base.major_transit_stops import MajorTransitStops
-from footprint.client.configuration.scag_dm.base.sphere_of_influence import SphereOfInfluence
-from footprint.client.configuration.scag_dm.base.sub_region import SubRegion
-from footprint.client.configuration.scag_dm.base.tier2_taz import Tier2Taz
-from footprint.client.configuration.scag_dm.base.transit_priority_areas import TransitPriorityAreas
-from footprint.client.configuration.scag_dm.base.city_boundary import CityBoundary
-from footprint.client.configuration.scag_dm.base.bike_lane import BikeLane
-from footprint.client.configuration.scag_dm.base.sea_level_rise import SeaLevelRise
-from footprint.client.configuration.scag_dm.config_entity.scag_dm_config_entities import ScagDmDbEntityKey
-from footprint.client.configuration.scag_dm.base.census_tracts import CensusTracts
+from footprint.client.configuration.clients.scag_dm.base.scenario_planning_zones import ScenarioPlanningZones
+from footprint.client.configuration.clients.scag_dm.base.county_boundary import CountyBoundary
+from footprint.client.configuration.clients.scag_dm.base.cpad_holdings import CpadHoldings
+from footprint.client.configuration.clients.scag_dm.base.endangered_species import EndangeredSpecies
+from footprint.client.configuration.clients.scag_dm.base.existing_land_use_parcel import ExistingLandUseParcel
+from footprint.client.configuration.clients.scag_dm.base.farmland import Farmland
+from footprint.client.configuration.clients.scag_dm.base.flood_zones import FloodZones
+from footprint.client.configuration.clients.scag_dm.base.general_plan_parcels import GeneralPlanParcels
+from footprint.client.configuration.clients.scag_dm.base.entitlement_parcels import EntitlementParcels
+from footprint.client.configuration.clients.scag_dm.base.habitat_conservation_areas import HabitatConservationAreas
+from footprint.client.configuration.clients.scag_dm.base.high_quality_transit_areas import HighQualityTransitAreas
+from footprint.client.configuration.clients.scag_dm.base.high_quality_transit_corridors import HighQualityTransitCorridors
+from footprint.client.configuration.clients.scag_dm.base.major_transit_stops import MajorTransitStops
+from footprint.client.configuration.clients.scag_dm.base.sphere_of_influence import SphereOfInfluence
+from footprint.client.configuration.clients.scag_dm.base.sub_region import SubRegion
+from footprint.client.configuration.clients.scag_dm.base.tier2_taz import Tier2Taz
+from footprint.client.configuration.clients.scag_dm.base.transit_priority_areas import TransitPriorityAreas
+from footprint.client.configuration.clients.scag_dm.base.city_boundary import CityBoundary
+from footprint.client.configuration.clients.scag_dm.base.bike_lane import BikeLane
+from footprint.client.configuration.clients.scag_dm.base.sea_level_rise import SeaLevelRise
+from footprint.client.configuration.clients.scag_dm.config_entity.scag_dm_config_entities import ScagDmDbEntityKey
+from footprint.client.configuration.clients.scag_dm.base.census_tracts import CensusTracts
 from footprint.main.models import GlobalConfig
 from footprint.main.models.category import Category
 from footprint.main.models.geospatial.db_entity import DbEntity
@@ -93,7 +93,7 @@ class ScagDmRegionFixture(RegionFixture):
                     fields=dict(),
                     related_fields=dict(land_use_definition=dict(
                         single=True,
-                        related_class_name='footprint.client.configuration.scag_dm.built_form.scag_dm_land_use_definition.ScagDmLandUseDefinition',
+                        related_class_name='footprint.client.configuration.clients.scag_dm.built_form.scag_dm_land_use_definition.ScagDmLandUseDefinition',
                         related_class_join_field_name='land_use',
                         source_class_join_field_name='scag_lu')
                     )
@@ -228,7 +228,7 @@ class ScagDmRegionFixture(RegionFixture):
                     fields=dict(),
                     related_fields=dict(land_use_definition=dict(
                         single=True,
-                        related_class_name='footprint.client.configuration.scag_dm.built_form.scag_dm_land_use_definition.ScagDmLandUseDefinition',
+                        related_class_name='footprint.client.configuration.clients.scag_dm.built_form.scag_dm_land_use_definition.ScagDmLandUseDefinition',
                         # Use this for the resource type, since we don't want a client-specific resource URL
                         # TODO not wired up yet
                         resource_model_class_name='footprint.main.models.built_form.ClientLandUseDefinition',

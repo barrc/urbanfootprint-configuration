@@ -11,7 +11,7 @@
 # Public License v3 for more details; see <http://www.gnu.org/licenses/>.
 
 from footprint.client.configuration.fixture import BuiltFormFixture
-from footprint.client.configuration.scag_dm.built_form.scag_dm_land_use import ScagDmLandUse
+from footprint.client.configuration.clients.scag_dm.built_form.scag_dm_land_use import ScagDmLandUse
 from footprint.main.lib.functions import merge
 from footprint.main.models.config.region import Region
 from footprint.main.models.built_form.urban.building_type import BuildingType

@@ -12,8 +12,8 @@
 
 from footprint.client.configuration.fixture import LayerConfigurationFixture
 from footprint.client.configuration.mixins.publishing.layer_primary_base import primary_base_layer_style
-from footprint.client.configuration.scag_dm.built_form.scag_dm_land_use_definition import ScagDmLandUseDefinition
-from footprint.client.configuration.scag_dm.config_entity.scag_dm_config_entities import ScagDmDbEntityKey
+from footprint.client.configuration.clients.scag_dm.built_form.scag_dm_land_use_definition import ScagDmLandUseDefinition
+from footprint.client.configuration.clients.scag_dm.config_entity.scag_dm_config_entities import ScagDmDbEntityKey
 from footprint.main.models.geospatial.geometry_type_keys import GeometryTypeKey, StyleTypeKey
 from footprint.main.models.presentation.presentation_configuration import LayerConfiguration
 from footprint.main.models.presentation.style_attribute import StyleValueContext, Style
