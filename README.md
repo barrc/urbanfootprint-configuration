@@ -1,0 +1,1 @@
+# urbanfootprint-client-config
