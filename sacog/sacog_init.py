@@ -20,7 +20,7 @@ from django.core.management import call_command
 from django.conf import settings
 
 from footprint.client.configuration.fixture import InitFixture
-from footprint.client.configuration.sacog.built_form.sacog_land_use_definition import SacogLandUseDefinition
+from footprint.client.configuration.clients.sacog.built_form.sacog_land_use_definition import SacogLandUseDefinition
 
 
 class SacogInitFixture(InitFixture):

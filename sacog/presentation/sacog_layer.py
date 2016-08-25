@@ -13,10 +13,10 @@
 from footprint.client.configuration.default.presentation.default_layer import built_form_based_layer_style
 from footprint.client.configuration.fixture import LayerConfigurationFixture
 from footprint.client.configuration.mixins.publishing.layer_primary_base import primary_base_layer_style
-from footprint.client.configuration.sacog.config_entity.sacog_region import SacogDbEntityKey
+from footprint.client.configuration.clients.sacog.config_entity.sacog_region import SacogDbEntityKey
 from footprint.main.models.geospatial.geometry_type_keys import GeometryTypeKey, StyleTypeKey
 from footprint.main.models.presentation.presentation_configuration import LayerConfiguration
-from footprint.client.configuration.sacog.built_form.sacog_land_use_definition import SacogLandUseDefinition
+from footprint.client.configuration.clients.sacog.built_form.sacog_land_use_definition import SacogLandUseDefinition
 from footprint.main.models.presentation.style_attribute import StyleValueContext, Style
 from footprint.main.publishing.layer_initialization import LayerSort, LayerLibraryKey
 from footprint.main.utils.fixture_list import FixtureList

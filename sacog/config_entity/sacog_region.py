@@ -10,17 +10,17 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General
 # Public License v3 for more details; see <http://www.gnu.org/licenses/>.
 
-from footprint.client.configuration.sacog.base.sacog_wetland_feature import SacogWetlandFeature
-from footprint.client.configuration.sacog.base.sacog_stream_feature import SacogStreamFeature
-from footprint.client.configuration.sacog.base.sacog_vernal_pool_feature import SacogVernalPoolFeature
-from footprint.client.configuration.sacog.base.sacog_light_rail_stops_half_mile_feature import \
+from footprint.client.configuration.clients.sacog.base.sacog_wetland_feature import SacogWetlandFeature
+from footprint.client.configuration.clients.sacog.base.sacog_stream_feature import SacogStreamFeature
+from footprint.client.configuration.clients.sacog.base.sacog_vernal_pool_feature import SacogVernalPoolFeature
+from footprint.client.configuration.clients.sacog.base.sacog_light_rail_stops_half_mile_feature import \
     SacogLightRailStopsHalfMileFeature
-from footprint.client.configuration.sacog.base.sacog_light_rail_stops_feature import SacogLightRailStopsFeature
-from footprint.client.configuration.sacog.base.sacog_light_rail_stops_one_mile_feature import \
+from footprint.client.configuration.clients.sacog.base.sacog_light_rail_stops_feature import SacogLightRailStopsFeature
+from footprint.client.configuration.clients.sacog.base.sacog_light_rail_stops_one_mile_feature import \
     SacogLightRailStopsOneMileFeature
-from footprint.client.configuration.sacog.base.sacog_light_rail_stops_quarter_mile_feature import \
+from footprint.client.configuration.clients.sacog.base.sacog_light_rail_stops_quarter_mile_feature import \
     SacogLightRailStopsQuarterMileFeature
-from footprint.client.configuration.sacog.base.sacog_light_rail_feature import SacogLightRailFeature
+from footprint.client.configuration.clients.sacog.base.sacog_light_rail_feature import SacogLightRailFeature
 from footprint.main.models import PhGridFeature
 
 from footprint.main.models.base.census_tract import CensusTract
