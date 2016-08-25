@@ -56,7 +56,7 @@ class ScagDmProjectFixture(ProjectFixture):
                     fields=dict(),
                     related_fields=dict(land_use_definition=dict(
                         single=True,
-                        related_class_name='footprint.client.configuration.clients.scag_dm.built_form.scag_dm_land_use_definition.ScagDmLandUseDefinition',
+                        related_class_name='footprint.client.configuration.scag_dm.built_form.scag_dm_land_use_definition.ScagDmLandUseDefinition',
                         related_class_join_field_name='land_use',
                         source_class_join_field_name='scag_lu')
                     )

@@ -93,7 +93,7 @@ class ScagDmRegionFixture(RegionFixture):
                     fields=dict(),
                     related_fields=dict(land_use_definition=dict(
                         single=True,
-                        related_class_name='footprint.client.configuration.clients.scag_dm.built_form.scag_dm_land_use_definition.ScagDmLandUseDefinition',
+                        related_class_name='footprint.client.configuration.scag_dm.built_form.scag_dm_land_use_definition.ScagDmLandUseDefinition',
                         related_class_join_field_name='land_use',
                         source_class_join_field_name='scag_lu')
                     )
@@ -228,7 +228,7 @@ class ScagDmRegionFixture(RegionFixture):
                     fields=dict(),
                     related_fields=dict(land_use_definition=dict(
                         single=True,
-                        related_class_name='footprint.client.configuration.clients.scag_dm.built_form.scag_dm_land_use_definition.ScagDmLandUseDefinition',
+                        related_class_name='footprint.client.configuration.scag_dm.built_form.scag_dm_land_use_definition.ScagDmLandUseDefinition',
                         # Use this for the resource type, since we don't want a client-specific resource URL
                         # TODO not wired up yet
                         resource_model_class_name='footprint.main.models.built_form.ClientLandUseDefinition',
