@@ -1,1 +1,1 @@
-"# sacog"
+# sacog
