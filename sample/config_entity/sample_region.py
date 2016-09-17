@@ -10,17 +10,6 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General
 # Public License v3 for more details; see <http://www.gnu.org/licenses/>.
 
-from footprint.client.configuration.sacog.base.sacog_wetland_feature import SacogWetlandFeature
-from footprint.client.configuration.sacog.base.sacog_stream_feature import SacogStreamFeature
-from footprint.client.configuration.sacog.base.sacog_vernal_pool_feature import SacogVernalPoolFeature
-from footprint.client.configuration.sacog.base.sacog_light_rail_stops_half_mile_feature import \
-    SacogLightRailStopsHalfMileFeature
-from footprint.client.configuration.sacog.base.sacog_light_rail_stops_feature import SacogLightRailStopsFeature
-from footprint.client.configuration.sacog.base.sacog_light_rail_stops_one_mile_feature import \
-    SacogLightRailStopsOneMileFeature
-from footprint.client.configuration.sacog.base.sacog_light_rail_stops_quarter_mile_feature import \
-    SacogLightRailStopsQuarterMileFeature
-from footprint.client.configuration.sacog.base.sacog_light_rail_feature import SacogLightRailFeature
 from footprint.main.models import PhGridFeature
 
 from footprint.main.models.base.census_tract import CensusTract
@@ -47,50 +36,14 @@ from footprint.main.utils.utils import get_property_path
 __author__ = 'calthorpe_analytics'
 
 
-class SacogDbEntityKey(DbEntityKey):
-    EXISTING_LAND_USE_PARCELS = 'existing_land_use_parcels'
-    ELK_GROVE_LAND_USE_PARCELS = 'elk_grove_land_use_parcels'
-    REGION_EXISTING_LAND_USE_PARCELS = 'region_existing_land_use_parcels'
-    STREAM = 'streams'
-    VERNAL_POOL = 'vernal_pools'
-    WETLAND = 'wetlands'
-    HARDWOOD = 'hardwoods'
-    LIGHT_RAIL = 'light_rail'
-    LIGHT_RAIL_STOPS = 'light_rail_stops'
-    LIGHT_RAIL_STOPS_ONE_MILE = 'light_rail_stops_one_mile'
-    LIGHT_RAIL_STOPS_HALF_MILE = 'light_rail_stops_half_mile'
-    LIGHT_RAIL_STOPS_QUARTER_MILE = 'light_rail_stops_quarter_mile'
-    COMMUNITY_TYPES = 'community_types'
+class SampleDbEntityKey(DbEntityKey):
+    # EXISTING_LAND_USE_PARCELS = 'existing_land_use_parcels'
 
-
-
-class SacogRegionFixture(RegionFixture):
-
-    def default_remote_db_entities(self):
-        """
-            Add the SACOG background. This function is called from default_db_entities so it doesn't
-            need to call the parent_fixture's method
-        """
-        # The Behavior keyspace
-        behavior_key = BehaviorKey.Fab.ricate
-        # Used to load Behaviors defined elsewhere
-        get_behavior = lambda key: Behavior.objects.get(key=behavior_key(key))
-
-        return [
-            DbEntity(
-                key='sacog_background',
-                url="http://services.sacog.org/arcgis/rest/services/Imagery_DigitalGlobe_2012WGS/MapServer/tile/{Z}/{Y}/{X}",
-                no_feature_class_configuration=True,
-                feature_behavior=FeatureBehavior(
-                    behavior=get_behavior('remote_imagery')
-                ),
-                _categories=[Category(key=DbEntityCategoryKey.KEY_CLASSIFICATION, value=DbEntityCategoryKey.BASEMAPS)]
-            )
-        ]
+class SampleRegionFixture(RegionFixture):
 
     def default_db_entities(self, **kwargs):
         """
-        Region specific SACOG db_entity_setups
+        Region specific db_entity_setups
         :param default_dict:
         :return:
         """
@@ -98,14 +51,14 @@ class SacogRegionFixture(RegionFixture):
         config_entity = self.config_entity
         parent_region_fixture = self.parent_fixture
         default_db_entities = parent_region_fixture.default_db_entities()
-        Key = SacogDbEntityKey
+        Key = SampleDbEntityKey
 
         # The Behavior keyspace
         behavior_key = BehaviorKey.Fab.ricate
         # Used to load Behaviors defined elsewhere
         get_behavior = lambda key: Behavior.objects.get(key=behavior_key(key))
 
-        if self.config_entity.key=='sacog':
+        if self.config_entity.key=='sample':
             # Block the client-level region. We just want real regions
             return []
 

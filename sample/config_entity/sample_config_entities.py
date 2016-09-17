@@ -17,7 +17,7 @@ from footprint.main.utils.fixture_list import FixtureList
 from django.contrib.gis.geos import MultiPolygon, Polygon
 __author__ = 'calthorpe_analytics'
 
-class SacogConfigEntitiesFixture(ConfigEntitiesFixture):
+class SampleConfigEntitiesFixture(ConfigEntitiesFixture):
     def project_key(self):
         return None
 
@@ -35,7 +35,7 @@ class SacogConfigEntitiesFixture(ConfigEntitiesFixture):
                     (-122.719, 38.059),  # top left
                     (-121.603, 38.059),  # top right
                     (-121.603, 37.394),  # bottom right
-                    (-122.719, 37.394),  # bottom leftsample_config_entities
+                    (-122.719, 37.394),  # bottom left
                 ))])
             },
         ]).matching_keys(key=region_keys).matching_scope(class_scope=class_scope)

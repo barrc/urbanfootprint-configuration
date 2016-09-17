@@ -17,7 +17,7 @@ from footprint.main.publishing.result_initialization import ResultConfiguration,
 from footprint.main.utils.fixture_list import FixtureList
 
 
-class SacogResultConfigurationFixtures(ResultConfigurationFixture):
+class SampleResultConfigurationFixtures(ResultConfigurationFixture):
 
 
     def results(self):
