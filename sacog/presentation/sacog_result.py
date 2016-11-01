@@ -303,21 +303,11 @@ class SacogResultConfigurationFixtures(ResultConfigurationFixture):
                     source_db_entity_key=DbEntityKey.SWMM,
 
                     name='SWMM',
-                    attributes=['total_water_use', 'residential_water_use', 'commercial_water_use',
-                                'residential_indoor_water_use', 'residential_outdoor_water_use',
-                                'commercial_indoor_water_use', 'commercial_outdoor_water_use'],
+                    attributes=['total_swmm_runoff'],
                     db_column_lookup=dict(
-                        total_water_use='total_water_use',
-                        residential_water_use='residential_water_use',
-                        commercial_water_use='commercial_water_use',
-                        residential_indoor_water_use='residential_indoor_water_use',
-                        residential_outdoor_water_use='residential_outdoor_water_use',
-                        commercial_indoor_water_use='commercial_indoor_water_use',
-                        commercial_outdoor_water_use='commercial_outdoor_water_use'
+                        total_swmm_runoff='total_swmm_runoff',
                     ),
-                    labels=['total_water_use', 'residential_water_use', 'commercial_water_use',
-                                'residential_indoor_water_use', 'residential_outdoor_water_use',
-                                'commercial_indoor_water_use', 'commercial_outdoor_water_use'],
+                    labels=['total_swmm_runoff'],
                     stackable=False,
                     is_stacked=False,
                     create_query=self.simple_aggregate,
@@ -410,64 +400,21 @@ class SacogResultConfigurationFixtures(ResultConfigurationFixture):
                     sort_priority=ResultSort.BASE
                  ),
 
-                #result configurartions for SWMM analysis
-                ResultConfiguration(
-                    result_type='bar_graph',
-                    library_keys=[ResultLibraryKey.SWMM],
-                    result_db_entity_key=ResultKey.SWMM_INDOOR_OUTDOOR,
-                    source_db_entity_key=DbEntityKey.SWMM,
-
-                    name='SWMM Use (gal): Indoor and Outdoor ',
-                    attributes=['residential_indoor_water_use', 'residential_outdoor_water_use',
-                                'commercial_indoor_water_use',  'commercial_outdoor_water_use'],
-                    db_column_lookup=dict(
-                        residential_indoor_water_use='residential_indoor_water_use',
-                        residential_outdoor_water_use='residential_outdoor_water_use',
-                        commercial_indoor_water_use='commercial_indoor_water_use',
-                        commercial_outdoor_water_use='commercial_outdoor_water_use'
-                    ),
-                    labels=['Res-Indoor', 'Res-Outdoor', 'Com-Indoor', 'Com-Outdoor'],
-                    stackable=False,
-                    is_stacked=False,
-                    create_query=self.simple_aggregate,
-                    sort_priority=ResultSort.BASE
-                 ),
-
                 ResultConfiguration(
                     result_type='bar_graph',
                     library_keys=[ResultLibraryKey.SWMM],
                     result_db_entity_key=ResultKey.SWMM_TOTAL,
                     source_db_entity_key=DbEntityKey.SWMM,
 
-                    name='SWMM Use (gal): Residential and Commercial',
-                    attributes=['residential_water_use', 'commercial_water_use'],
+                    name='SWMM Runoff',
+                    attributes=['total_swmm_runoff'],
                     db_column_lookup=dict(
-                        residential_water_use='residential_water_use',
-                        commercial_water_use='commercial_water_use'
+                        total_swmm_runoff='total_swmm_runoff',
                     ),
-                    labels=['Residential', 'Commercial'],
+                    labels=['Total SWMM Runoff'],
                     stackable=False,
                     is_stacked=False,
                     create_query=self.simple_aggregate,
-                    sort_priority=ResultSort.BASE
-                 ),
-
-                ResultConfiguration(
-                    result_type='bar_graph',
-                    library_keys=[ResultLibraryKey.SWMM],
-                    result_db_entity_key=ResultKey.SWMM_COSTS_TOTAL,
-                    source_db_entity_key=DbEntityKey.SWMM,
-
-                    name='SWMM Costs ($-2014): Residential and Commercial',
-                    attributes=['residential_water_use', 'commercial_water_use'],
-                    db_column_lookup=dict(
-                        residential_water_use='residential_water_use',
-                        commercial_water_use='commercial_water_use'
-                    ),
-                    labels=['Residential', 'Commercial'],
-                    stackable=False,
-                    is_stacked=False,
-                    create_query=lambda result_config: 'SELECT SUM(residential_water_use) / 325851.431889 * 1349.0 as residential_water_use__sum, SUM(commercial_water_use) / 325851.431889 * 1349.0 as commercial_water_use__sum from %({0})s'.format(DbEntityKey.SWMM),
                     sort_priority=ResultSort.BASE
                  ),
 

@@ -194,30 +194,8 @@ class DefaultResultConfigurationFixtures(DefaultMixin, ResultConfigurationFixtur
         ),
 
         Medium.objects.update_or_create(
-            key=ResultMediumKey.SWMM_INDOOR_OUTDOOR,
-            name=ResultMediumKey.SWMM_INDOOR_OUTDOOR,
-            defaults={
-                'content_type': ContentTypeKey.PYTHON,
-                'content': {
-                    'colorRange': ['#05B8CC', '#00688B']
-                },
-                'description': 'swmm colors'}
-        ),
-
-        Medium.objects.update_or_create(
             key=ResultMediumKey.SWMM_TOTAL,
             name=ResultMediumKey.SWMM_TOTAL,
-            defaults={
-                'content_type': ContentTypeKey.PYTHON,
-                'content': {
-                    'colorRange': ['#05B8CC', '#00688B']
-                },
-                'description': 'swmm colors'}
-        ),
-
-        Medium.objects.update_or_create(
-            key=ResultMediumKey.SWMM_COSTS_TOTAL,
-            name=ResultMediumKey.SWMM_COSTS_TOTAL,
             defaults={
                 'content_type': ContentTypeKey.PYTHON,
                 'content': {

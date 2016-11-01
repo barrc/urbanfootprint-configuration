@@ -164,7 +164,7 @@ class SacogLayerConfigurationFixture(LayerConfigurationFixture):
                     geometry_type=GeometryTypeKey.POLYGON,
                     style_attributes=[
                         dict(
-                            attribute='annual_gallons_per_unit',
+                            attribute='total_swmm_runoff',
                             style_type=StyleTypeKey.QUANTITATIVE,
                             style_value_contexts=[
                                 StyleValueContext(value=0, symbol='=', style=Style(polygon_fill='#909090')),
