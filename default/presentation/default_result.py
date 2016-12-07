@@ -205,6 +205,72 @@ class DefaultResultConfigurationFixtures(DefaultMixin, ResultConfigurationFixtur
         ),
 
         Medium.objects.update_or_create(
+            key=ResultMediumKey.SWMM_PRECIP_IN,
+            name=ResultMediumKey.SWMM_PRECIP_IN,
+            defaults={
+                'content_type': ContentTypeKey.PYTHON,
+                'content': {
+                    'colorRange': ['#05B8CC', '#00688B']
+                },
+                'description': 'swmm colors'}
+        ),
+
+        Medium.objects.update_or_create(
+            key=ResultMediumKey.SWMM_EVAP_IN,
+            name=ResultMediumKey.SWMM_EVAP_IN,
+            defaults={
+                'content_type': ContentTypeKey.PYTHON,
+                'content': {
+                    'colorRange': ['#05B8CC', '#00688B']
+                },
+                'description': 'swmm colors'}
+        ),
+
+        Medium.objects.update_or_create(
+            key=ResultMediumKey.SWMM_INFIL_IN,
+            name=ResultMediumKey.SWMM_INFIL_IN,
+            defaults={
+                'content_type': ContentTypeKey.PYTHON,
+                'content': {
+                    'colorRange': ['#05B8CC', '#00688B']
+                },
+                'description': 'swmm colors'}
+        ),
+
+        Medium.objects.update_or_create(
+            key=ResultMediumKey.SWMM_RUNOFF_IN,
+            name=ResultMediumKey.SWMM_RUNOFF_IN,
+            defaults={
+                'content_type': ContentTypeKey.PYTHON,
+                'content': {
+                    'colorRange': ['#05B8CC', '#00688B']
+                },
+                'description': 'swmm colors'}
+        ),
+
+        Medium.objects.update_or_create(
+            key=ResultMediumKey.SWMM_RUNOFF_GAL,
+            name=ResultMediumKey.SWMM_RUNOFF_GAL,
+            defaults={
+                'content_type': ContentTypeKey.PYTHON,
+                'content': {
+                    'colorRange': ['#05B8CC', '#00688B']
+                },
+                'description': 'swmm colors'}
+        ),
+
+        Medium.objects.update_or_create(
+            key=ResultMediumKey.SWMM_PEAK_RUNOFF_CFS,
+            name=ResultMediumKey.SWMM_PEAK_RUNOFF_CFS,
+            defaults={
+                'content_type': ContentTypeKey.PYTHON,
+                'content': {
+                    'colorRange': ['#05B8CC', '#00688B']
+                },
+                'description': 'swmm colors'}
+        ),
+
+        Medium.objects.update_or_create(
             key=ResultMediumKey.VMT_PER_CAPITA,
             name=ResultMediumKey.VMT_PER_CAPITA,
             defaults={

@@ -303,11 +303,17 @@ class SacogResultConfigurationFixtures(ResultConfigurationFixture):
                     source_db_entity_key=DbEntityKey.SWMM,
 
                     name='SWMM',
-                    attributes=['total_swmm_runoff'],
+                    attributes=['total_swmm_runoff','total_precip_in','total_evap_in','total_infil_in','total_runoff_in','total_runoff_gal','peak_runoff_cfs'],
                     db_column_lookup=dict(
                         total_swmm_runoff='total_swmm_runoff',
+                        total_precip_in='total_precip_in',
+                        total_evap_in='total_evap_in',
+                        total_infil_in='total_infil_in',
+                        total_runoff_in='total_runoff_in',
+                        total_runoff_gal='total_runoff_gal',
+                        peak_runoff_cfs='peak_runoff_cfs'
                     ),
-                    labels=['total_swmm_runoff'],
+                    labels=['total_swmm_runoff','total_precip_in','total_evap_in','total_infil_in','total_runoff_in','total_runoff_gal','peak_runoff_cfs'],
                     stackable=False,
                     is_stacked=False,
                     create_query=self.simple_aggregate,
@@ -412,6 +418,114 @@ class SacogResultConfigurationFixtures(ResultConfigurationFixture):
                         total_swmm_runoff='total_swmm_runoff',
                     ),
                     labels=['Total SWMM Runoff'],
+                    stackable=False,
+                    is_stacked=False,
+                    create_query=self.simple_aggregate,
+                    sort_priority=ResultSort.BASE
+                 ),
+
+                ResultConfiguration(
+                    result_type='bar_graph',
+                    library_keys=[ResultLibraryKey.SWMM],
+                    result_db_entity_key=ResultKey.SWMM_PRECIP_IN,
+                    source_db_entity_key=DbEntityKey.SWMM,
+
+                    name='SWMM SWMM_PRECIP_IN',
+                    attributes=['total_precip_in'],
+                    db_column_lookup=dict(
+                        total_precip_in='total_precip_in',
+                    ),
+                    labels=['Total SWMM SWMM_PRECIP_IN'],
+                    stackable=False,
+                    is_stacked=False,
+                    create_query=self.simple_aggregate,
+                    sort_priority=ResultSort.BASE
+                 ),
+
+                ResultConfiguration(
+                    result_type='bar_graph',
+                    library_keys=[ResultLibraryKey.SWMM],
+                    result_db_entity_key=ResultKey.SWMM_EVAP_IN,
+                    source_db_entity_key=DbEntityKey.SWMM,
+
+                    name='SWMM SWMM_EVAP_IN',
+                    attributes=['total_evap_in'],
+                    db_column_lookup=dict(
+                        total_evap_in='total_evap_in',
+                    ),
+                    labels=['Total SWMM SWMM_EVAP_IN'],
+                    stackable=False,
+                    is_stacked=False,
+                    create_query=self.simple_aggregate,
+                    sort_priority=ResultSort.BASE
+                 ),
+
+                ResultConfiguration(
+                    result_type='bar_graph',
+                    library_keys=[ResultLibraryKey.SWMM],
+                    result_db_entity_key=ResultKey.SWMM_INFIL_IN,
+                    source_db_entity_key=DbEntityKey.SWMM,
+
+                    name='SWMM SWMM_INFIL_IN',
+                    attributes=['total_infil_in'],
+                    db_column_lookup=dict(
+                        total_infil_in='total_infil_in',
+                    ),
+                    labels=['Total SWMM SWMM_INFIL_IN'],
+                    stackable=False,
+                    is_stacked=False,
+                    create_query=self.simple_aggregate,
+                    sort_priority=ResultSort.BASE
+                 ),
+
+                ResultConfiguration(
+                    result_type='bar_graph',
+                    library_keys=[ResultLibraryKey.SWMM],
+                    result_db_entity_key=ResultKey.SWMM_RUNOFF_IN,
+                    source_db_entity_key=DbEntityKey.SWMM,
+
+                    name='SWMM SWMM_RUNOFF_IN',
+                    attributes=['total_runoff_in'],
+                    db_column_lookup=dict(
+                        total_runoff_in='total_runoff_in',
+                    ),
+                    labels=['Total SWMM SWMM_RUNOFF_IN'],
+                    stackable=False,
+                    is_stacked=False,
+                    create_query=self.simple_aggregate,
+                    sort_priority=ResultSort.BASE
+                 ),
+
+                ResultConfiguration(
+                    result_type='bar_graph',
+                    library_keys=[ResultLibraryKey.SWMM],
+                    result_db_entity_key=ResultKey.SWMM_RUNOFF_GAL,
+                    source_db_entity_key=DbEntityKey.SWMM,
+
+                    name='SWMM SWMM_RUNOFF_GAL',
+                    attributes=['total_runoff_gal'],
+                    db_column_lookup=dict(
+                        total_runoff_gal='total_runoff_gal',
+                    ),
+                    labels=['Total SWMM SWMM_RUNOFF_GAL'],
+                    stackable=False,
+                    is_stacked=False,
+                    create_query=self.simple_aggregate,
+                    sort_priority=ResultSort.BASE
+                 ),
+
+                ResultConfiguration(
+                    result_type='bar_graph',
+                    library_keys=[ResultLibraryKey.SWMM],
+                    result_db_entity_key=ResultKey.SWMM_PEAK_RUNOFF_CFS,
+                    source_db_entity_key=DbEntityKey.SWMM,
+
+                    name='SWMM SWMM_PEAK_RUNOFF_CFS',
+                    attributes=['peak_runoff_cfs'],
+                    db_column_lookup=dict(
+                        peak_runoff_cfs='peak_runoff_cfs',
+                    ),
+                    labels=['Total SWMM SWMM_PEAK_RUNOFF_CFS'],
                     stackable=False,
                     is_stacked=False,
                     create_query=self.simple_aggregate,
