@@ -435,7 +435,7 @@ class SacogResultConfigurationFixtures(ResultConfigurationFixture):
                     db_column_lookup=dict(
                         total_precip_in='total_precip_in',
                     ),
-                    labels=['Total SWMM SWMM_PRECIP_IN'],
+                    labels=['Total Precipitation (In)'],
                     stackable=False,
                     is_stacked=False,
                     create_query=self.simple_aggregate,
@@ -453,7 +453,7 @@ class SacogResultConfigurationFixtures(ResultConfigurationFixture):
                     db_column_lookup=dict(
                         total_evap_in='total_evap_in',
                     ),
-                    labels=['Total SWMM SWMM_EVAP_IN'],
+                    labels=['Total Evaporation (In)'],
                     stackable=False,
                     is_stacked=False,
                     create_query=self.simple_aggregate,
@@ -471,7 +471,7 @@ class SacogResultConfigurationFixtures(ResultConfigurationFixture):
                     db_column_lookup=dict(
                         total_infil_in='total_infil_in',
                     ),
-                    labels=['Total SWMM SWMM_INFIL_IN'],
+                    labels=['Total Infiltration (In)'],
                     stackable=False,
                     is_stacked=False,
                     create_query=self.simple_aggregate,
@@ -489,7 +489,7 @@ class SacogResultConfigurationFixtures(ResultConfigurationFixture):
                     db_column_lookup=dict(
                         total_runoff_in='total_runoff_in',
                     ),
-                    labels=['Total SWMM SWMM_RUNOFF_IN'],
+                    labels=['Total Runoff (In)'],
                     stackable=False,
                     is_stacked=False,
                     create_query=self.simple_aggregate,
@@ -507,7 +507,7 @@ class SacogResultConfigurationFixtures(ResultConfigurationFixture):
                     db_column_lookup=dict(
                         total_runoff_gal='total_runoff_gal',
                     ),
-                    labels=['Total SWMM SWMM_RUNOFF_GAL'],
+                    labels=['Total Runoff (Gal)'],
                     stackable=False,
                     is_stacked=False,
                     create_query=self.simple_aggregate,
@@ -525,7 +525,7 @@ class SacogResultConfigurationFixtures(ResultConfigurationFixture):
                     db_column_lookup=dict(
                         peak_runoff_cfs='peak_runoff_cfs',
                     ),
-                    labels=['Total SWMM SWMM_PEAK_RUNOFF_CFS'],
+                    labels=['Total Peak Runoff (CFS)'],
                     stackable=False,
                     is_stacked=False,
                     create_query=self.simple_aggregate,
