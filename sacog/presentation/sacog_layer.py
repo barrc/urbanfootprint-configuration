@@ -169,16 +169,16 @@ class SacogLayerConfigurationFixture(LayerConfigurationFixture):
                             style_value_contexts=[
                                 StyleValueContext(value=0.0, symbol='=', style=Style(polygon_fill='#909090')),
                                 StyleValueContext(value=0.0, symbol='>', style=Style(polygon_fill='#B3D8FF')),
-                                StyleValueContext(value=0.1, symbol='>', style=Style(polygon_fill='#9FC6F0')),
-                                StyleValueContext(value=0.2, symbol='>', style=Style(polygon_fill='#8BB5E1')),
-                                StyleValueContext(value=0.3, symbol='>', style=Style(polygon_fill='#77A4D2')),
-                                StyleValueContext(value=0.4, symbol='>', style=Style(polygon_fill='#6392C3')),
-                                StyleValueContext(value=0.5, symbol='>', style=Style(polygon_fill='#6392C3')),
-                                StyleValueContext(value=0.6, symbol='>', style=Style(polygon_fill='#5081B5')),
-                                StyleValueContext(value=0.7, symbol='>', style=Style(polygon_fill='#3C70A6')),
-                                StyleValueContext(value=0.8, symbol='>', style=Style(polygon_fill='#285E97')),
-                                StyleValueContext(value=0.9, symbol='>', style=Style(polygon_fill='#144D88')),
-                                StyleValueContext(value=1.0, symbol='>', style=Style(polygon_fill='#013C7A')),
+                                StyleValueContext(value=10, symbol='>', style=Style(polygon_fill='#9FC6F0')),
+                                StyleValueContext(value=20, symbol='>', style=Style(polygon_fill='#8BB5E1')),
+                                StyleValueContext(value=30, symbol='>', style=Style(polygon_fill='#77A4D2')),
+                                StyleValueContext(value=40, symbol='>', style=Style(polygon_fill='#6392C3')),
+                                StyleValueContext(value=50, symbol='>', style=Style(polygon_fill='#6392C3')),
+                                StyleValueContext(value=60, symbol='>', style=Style(polygon_fill='#5081B5')),
+                                StyleValueContext(value=70, symbol='>', style=Style(polygon_fill='#3C70A6')),
+                                StyleValueContext(value=80, symbol='>', style=Style(polygon_fill='#285E97')),
+                                StyleValueContext(value=90, symbol='>', style=Style(polygon_fill='#144D88')),
+                                StyleValueContext(value=100, symbol='>', style=Style(polygon_fill='#013C7A')),
                             ]
                         )
                     ]
