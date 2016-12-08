@@ -409,24 +409,6 @@ class SacogResultConfigurationFixtures(ResultConfigurationFixture):
                 ResultConfiguration(
                     result_type='bar_graph',
                     library_keys=[ResultLibraryKey.SWMM],
-                    result_db_entity_key=ResultKey.SWMM_TOTAL,
-                    source_db_entity_key=DbEntityKey.SWMM,
-
-                    name='Total SWMM Runoff',
-                    attributes=['total_swmm_runoff'],
-                    db_column_lookup=dict(
-                        total_swmm_runoff='total_swmm_runoff',
-                    ),
-                    labels=['Total SWMM Runoff'],
-                    stackable=False,
-                    is_stacked=False,
-                    create_query=self.simple_aggregate,
-                    sort_priority=ResultSort.BASE
-                 ),
-
-                ResultConfiguration(
-                    result_type='bar_graph',
-                    library_keys=[ResultLibraryKey.SWMM],
                     result_db_entity_key=ResultKey.SWMM_PRECIP_IN,
                     source_db_entity_key=DbEntityKey.SWMM,
 
