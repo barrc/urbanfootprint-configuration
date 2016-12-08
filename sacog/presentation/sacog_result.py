@@ -412,7 +412,7 @@ class SacogResultConfigurationFixtures(ResultConfigurationFixture):
                     result_db_entity_key=ResultKey.SWMM_TOTAL,
                     source_db_entity_key=DbEntityKey.SWMM,
 
-                    name='SWMM Runoff',
+                    name='Total SWMM Runoff',
                     attributes=['total_swmm_runoff'],
                     db_column_lookup=dict(
                         total_swmm_runoff='total_swmm_runoff',
@@ -430,7 +430,7 @@ class SacogResultConfigurationFixtures(ResultConfigurationFixture):
                     result_db_entity_key=ResultKey.SWMM_PRECIP_IN,
                     source_db_entity_key=DbEntityKey.SWMM,
 
-                    name='SWMM SWMM_PRECIP_IN',
+                    name='Total Precipitation (In)',
                     attributes=['total_precip_in'],
                     db_column_lookup=dict(
                         total_precip_in='total_precip_in',
@@ -448,7 +448,7 @@ class SacogResultConfigurationFixtures(ResultConfigurationFixture):
                     result_db_entity_key=ResultKey.SWMM_EVAP_IN,
                     source_db_entity_key=DbEntityKey.SWMM,
 
-                    name='SWMM SWMM_EVAP_IN',
+                    name='Total Evaporation (In)',
                     attributes=['total_evap_in'],
                     db_column_lookup=dict(
                         total_evap_in='total_evap_in',
@@ -466,7 +466,7 @@ class SacogResultConfigurationFixtures(ResultConfigurationFixture):
                     result_db_entity_key=ResultKey.SWMM_INFIL_IN,
                     source_db_entity_key=DbEntityKey.SWMM,
 
-                    name='SWMM SWMM_INFIL_IN',
+                    name='Total Infiltration (In)',
                     attributes=['total_infil_in'],
                     db_column_lookup=dict(
                         total_infil_in='total_infil_in',
@@ -484,7 +484,7 @@ class SacogResultConfigurationFixtures(ResultConfigurationFixture):
                     result_db_entity_key=ResultKey.SWMM_RUNOFF_IN,
                     source_db_entity_key=DbEntityKey.SWMM,
 
-                    name='SWMM SWMM_RUNOFF_IN',
+                    name='Total Runoff (In)',
                     attributes=['total_runoff_in'],
                     db_column_lookup=dict(
                         total_runoff_in='total_runoff_in',
@@ -502,7 +502,7 @@ class SacogResultConfigurationFixtures(ResultConfigurationFixture):
                     result_db_entity_key=ResultKey.SWMM_RUNOFF_GAL,
                     source_db_entity_key=DbEntityKey.SWMM,
 
-                    name='SWMM SWMM_RUNOFF_GAL',
+                    name='Total Runoff (Gal)',
                     attributes=['total_runoff_gal'],
                     db_column_lookup=dict(
                         total_runoff_gal='total_runoff_gal',
@@ -520,7 +520,7 @@ class SacogResultConfigurationFixtures(ResultConfigurationFixture):
                     result_db_entity_key=ResultKey.SWMM_PEAK_RUNOFF_CFS,
                     source_db_entity_key=DbEntityKey.SWMM,
 
-                    name='SWMM SWMM_PEAK_RUNOFF_CFS',
+                    name='Total Peak Runoff (CFS)',
                     attributes=['peak_runoff_cfs'],
                     db_column_lookup=dict(
                         peak_runoff_cfs='peak_runoff_cfs',
